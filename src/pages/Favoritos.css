@@ -1,0 +1,112 @@
+.nenhum-favoritado {
+  margin-left: 50px;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.favoritos-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.favoritos-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.favoritos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.favorito-card {
+  width: 300px;
+  min-height: 400px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(11, 20, 105, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.favorito-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(17, 30, 153, 0.3);
+}
+
+.favorito-img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.favorito-nome {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
+
+.favorito-preco {
+  font-size: 18px;
+  color: #b12704;
+  margin-bottom: 15px;
+}
+
+.remover-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.remover-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+/* Mensagem quando não houver favoritos */
+.nenhum-favorito {
+  font-size: 20px;
+  color: #555555;
+  margin-top: 50px;
+}
+
+/* --- RESPONSIVIDADE PARA TELA PEQUENA --- */
+@media (max-width: 480px) {
+  .favoritos-container h2 {
+    font-size: 22px;
+  }
+
+  .favorito-nome {
+    font-size: 18px;
+    max-width: 200px;
+  }
+
+  .favorito-card {
+    max-width: 90%; /* card ocupa a tela corretamente */
+  }
+
+  .favorito-img {
+    max-width: 200px;
+  }
+}

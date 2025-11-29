@@ -1,0 +1,109 @@
+/* Container que centraliza o card */
+.produto-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.produto-card {
+  width: 400px; /* largura maior */
+  min-height: 500px; /* altura mínima do card */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(11, 20, 105, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produto-img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.produto-descricao {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.produto-nome {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  max-width: 240px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.produto-preco {
+  font-size: 25px;
+  color: #b12704;
+  margin-bottom: 10px;
+  margin-bottom: 45px;
+}
+
+/* Botão de favoritar */
+.favoritar-btn {
+  font-size: 20px;
+  padding: 16px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4081;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.favoritar-btn:hover {
+  background-color: #e73370;
+  transform: scale(1.05);
+}
+
+.voltar-btn {
+  font-size: 20px;
+  padding: 16px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0077cc; /* azul do botão */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  margin-top: 20px; /* espaçamento em relação ao card */
+}
+
+.voltar-btn:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+/* --- RESPONSIVO PARA CELULAR --- */
+@media (max-width: 480px) {
+  .produto-card {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .produto-nome {
+    font-size: 20px;
+  }
+
+  .produto-descricao {
+    font-size: 16px;
+  }
+
+  .produto-preco {
+    font-size: 22px;
+  }
+
+  .favoritar-btn,
+  .voltar-btn {
+    width: 100%; /* Botões ocupam toda a largura no mobile */
+  }
+}

@@ -1,0 +1,78 @@
+.lista-produtos h2 {
+  font-size: 25px;
+  margin-left: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lista-produtos ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-produto-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 6px rgb(11, 20, 105);
+}
+
+.lista-produto-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgb(17, 30, 153);
+}
+
+.lista-link-card {
+  text-decoration: none; /* remove sublinhado */
+  color: inherit; /* mantém a cor do texto do card */
+}
+
+.lista-produto-img {
+  display: block;
+  width: 120px;
+  height: 110px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.lista-produto-nome {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px bold;
+  margin: 20px 20px 20px 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px; /* largura máxima do texto */
+  display: block;
+  text-overflow: ellipsis; /* mostra "..." quando é muito longo */
+  text-align: center;
+  color: #222222;
+}
+
+.lista-produto-preco {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  color: #b12704;
+}
+
+/* --- RESPONSIVIDADE PARA TELA PEQUENA --- */
+@media (max-width: 480px) {
+  .lista-produto-card {
+    max-width: 90%; /* ocupa quase a tela inteira */
+  }
+
+  .lista-produto-img {
+    max-width: 120px;
+  }
+
+  .lista-produto-nome {
+    font-size: 16px;
+    max-width: 180px;
+  }
+}
