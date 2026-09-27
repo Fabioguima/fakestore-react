@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter className="corpo">
+    <BrowserRouter basename="/fakestore-react">
       <nav className="nav-bar">
         <Link to="/">Produtos</Link> <Link to="/favorites">Favoritos</Link>
       </nav>
